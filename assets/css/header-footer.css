@@ -1,0 +1,137 @@
+@font-face {
+    font-family: "Marianne-Light";
+    src: url("../fonts/Marianne-Light.woff");
+}
+
+@font-face {
+    font-family: "Marianne-Bold";
+    src: url("../fonts/Marianne-Bold.woff");
+}
+
+html {
+    font-family: "Marianne-Light";
+}
+
+body {
+    margin: 0;
+}
+
+/* MENU DE NAVIGATION */
+.menu {
+    padding-top: 1%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-170deg, rgb(255, 255, 255) 0%, rgb(175, 195, 211) 100%);
+}
+
+.bar {
+    padding: 0 16%;
+    margin-top: 30px;
+    width: 70%;
+    height: 100px;
+    background-color: rgba(93, 104, 134, 0.364);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 10px -2px grey;
+}
+
+input {
+    font-family: "Marianne-Bold";
+    border: none;
+    width: 200px;
+    height: 50px;
+    font-size: large;
+    color: rgb(106, 98, 163);
+    box-shadow: 0 0 1px 1px;
+    transition: transform 0.2s, background-color 0.2s, font-size 0.2s, color 0.2s;
+}
+
+.profile-details input{
+    width:400px;
+}
+
+.bar input:hover {
+    font-family: "Marianne-Light";
+    background-color: rgb(106, 98, 163);
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transform: scale(1.04);
+}
+
+.logo {
+    width: 120px;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 2rem;
+    background-color: rgba(93, 104, 134, 0.24);
+    color: #000;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    border-top: 3px solid #000080;
+}
+
+.footer-links {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.footer-links img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.footer-links p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.links-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.links-group a {
+    font-size: 1rem;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.links-group a:hover {
+    color: #7a7acc;
+}
+
+.footer-access {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 20px;
+}
+
+.footer-access p {
+    margin: 5px 0;
+}
+
+/* Media Queries */
+@media screen and (max-width: 480px) {
+    .links-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .links-group a {
+        width: 100%;
+        text-align: center;
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+    }
+}

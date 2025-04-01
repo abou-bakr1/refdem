@@ -1,0 +1,182 @@
+@font-face {
+    font-family: "Marianne-Light";
+    src: url("../fonts/Marianne-Light.woff");
+}
+
+@font-face {
+    font-family: "Marianne-Bold";
+    src: url("../fonts/Marianne-Bold.woff");
+}
+
+html {
+    background: linear-gradient(-170deg, rgb(255, 255, 255) 0%, rgb(175, 195, 211) 100%);
+    height: 100%;
+}
+
+body {
+    font-weight: 100;
+    padding-top: 7%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap : 15%;
+    zoom: 1.1;
+}
+
+.gauche {
+    text-align: center;
+}
+
+.gauche p {
+    font-size: 20px;
+    font-family: "Marianne-Bold";
+    margin: 20px 0 0 0;
+    line-height: 1.5;
+}
+
+img {
+    width: 170px;
+    overflow: hidden;
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+.ligneV {
+    padding-bottom: 2%;
+    width: 1px;
+    height: 500px;
+    background-color: gray;
+}
+
+.ligneH {
+    margin-top: 2%;
+    width: 100%;
+    height: 1.5px;
+    background-color: gray;
+}
+
+.droite h1 {
+    font-family: "Marianne-Bold";
+    font-size: 70px;
+    color: rgb(90, 90, 90);
+    margin: 0 0 40px 0;
+    line-height: 1.1;
+}
+
+.identification {
+    background-color: rgba(144, 155, 184, 0.779);
+    width: 400px;
+    padding: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+input {
+    font-family: "Marianne-Bold";
+    color: rgb(106, 98, 163);
+    border: none;
+    transition-duration: 0.2s;
+    width: 90%;
+    height: 40px;
+    padding: 0 15px;
+    background: white;
+    box-shadow: 0px 0px 1px 1px;
+}
+
+input[type="submit"], input[type="button"] {
+    width: 80%;
+}
+
+input[type="submit"] {
+    background-color: #86bdff;
+    color: rgb(106, 98, 163);
+}
+
+input[type="button"] {
+    background-color: #abffc2;
+    color: rgb(106, 98, 163);
+}
+
+input[type="submit"]:hover {
+    background-color: #bad9ff;
+    cursor: pointer;
+    transform: scale(1.04);
+    transition-duration: 0.2s;
+}
+
+input[type="button"]:hover {
+    background-color: #e3ffeb;
+    cursor: pointer;
+    transform: scale(1.04);
+    transition-duration: 0.2s;
+}
+
+.alert {
+    background: transparent;
+    border: 2px solid #ff0000;
+    color: white;
+    height: 40px;
+    margin: 0 auto 20px auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Marianne-Bold";
+    font-size: 16px;
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        gap: 5%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 20px;
+        gap: 40px;
+    }
+
+    .ligneV {
+        display: none;
+    }
+
+    .droite h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .identification {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .droite h1 {
+        font-size: 36px;
+    }
+
+    input {
+        height: 40px;
+    }
+}

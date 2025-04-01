@@ -1,0 +1,494 @@
+/* Forum styles */
+.forum-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.sidebar {
+    flex: 0 0 300px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.main-content {
+    flex: 1;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* User Profile */
+.user-profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.user-name {
+    margin: 0;
+    color: #333;
+}
+
+.user-handle {
+    margin: 5px 0;
+    color: #666;
+}
+
+/* Group Buttons Container */
+.group-buttons-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.group-buttons-container button {
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: normal;
+    transition: all 0.3s ease;
+    font-size: 1em;
+    text-align: center;
+}
+
+.group-buttons-container .create-group-btn {
+    background-color: #6a62a3;
+    color: white;
+}
+
+.group-buttons-container button i {
+    font-size: 1.1em;
+}
+
+.group-buttons-container .create-group-btn:hover {
+    background-color: #5b548f;
+}
+
+/* Group Buttons */
+.create-group-btn,
+.consult-group-btn,
+.delete-group-btn,
+.leave-group-btn,
+.action-button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.create-group-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.consult-group-btn {
+    background-color: #9C27B0;
+    color: white;
+}
+
+.delete-group-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.leave-group-btn {
+    background-color: #FF9800;
+    color: white;
+}
+
+.action-button {
+    background-color: #607D8B;
+    color: white;
+}
+
+.create-group-btn:hover { background-color: #43A047; }
+.consult-group-btn:hover { background-color: #8E24AA; }
+.delete-group-btn:hover { background-color: #E53935; }
+.leave-group-btn:hover { background-color: #FB8C00; }
+.action-button:hover { background-color: #546E7A; }
+
+/* Group Cards */
+.groups-list-main {
+    display: grid;
+    gap: 20px;
+}
+
+.group-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.group-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.group-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.group-info h3 {
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.group-creator {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.group-stats {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.member-count {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.group-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    position: relative;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    margin: 0;
+}
+
+.close {
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content input[type="password"],
+.modal-content textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: transparent !important;
+    color: #333;
+}
+
+.modal-content input[type="text"]:focus,
+.modal-content input[type="email"]:focus,
+.modal-content input[type="password"]:focus,
+.modal-content textarea:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background-color: transparent !important;
+}
+
+.modal-content input[type="text"]::placeholder,
+.modal-content input[type="email"]::placeholder,
+.modal-content input[type="password"]::placeholder,
+.modal-content textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.modal-content .form-group input,
+.modal-content .form-control {
+    background-color: transparent !important;
+    border: none;
+}
+
+/* Modal Create Button */
+.modal-content .create-button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.modal-content .create-button {
+    padding: 10px 30px;
+    background-color: transparent;
+    color: #6a62a3;
+    border: 1px solid #6a62a3;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 1em;
+    min-width: 150px;
+    transition: all 0.3s ease;
+}
+
+.modal-content .create-button:hover {
+    background-color: #6a62a3;
+    color: white;
+}
+
+/* Invitations */
+.invitations-section {
+    margin-top: 20px;
+}
+
+.invitations-list {
+    margin-top: 10px;
+}
+
+.invitation-item {
+    background: #f5f5f5;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.invitation-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.invitation-details {
+    flex: 1;
+}
+
+.invitation-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.accept-btn,
+.refuse-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.accept-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.refuse-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Animations */
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+/* Detailed View */
+.group-detailed-view {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.group-view-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.close-view-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+}
+
+.group-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.group-action-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.invite-btn { background-color: #2196F3; }
+.members-btn { background-color: #9C27B0; }
+.discussion-btn { background-color: #4CAF50; }
+.debate-btn { background-color: #FF9800; }
+
+.invite-btn:hover { background-color: #1E88E5; }
+.members-btn:hover { background-color: #8E24AA; }
+.discussion-btn:hover { background-color: #43A047; }
+.debate-btn:hover { background-color: #FB8C00; }
+
+/* Popup */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.members-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.close-popup-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+}
+
+.member-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.member-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.member-role {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.remove-member-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9em;
+}
+
+.remove-member-btn:hover {
+    background-color: #E53935;
+}
